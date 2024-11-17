@@ -78,7 +78,7 @@ document.querySelector(".form").addEventListener("submit", function (e) {
     const apiUrl = "https://registerpage-roan.vercel.app/"; // твой серверный URL
 
     // Отправка данных на сервер
-    fetch("/send-message", {
+    fetch("https://registerpage-roan.vercel.app/api/sendMessage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",  // Указываем правильный заголовок
