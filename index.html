@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shon's Academy Register Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main-container">
+    <header class="header">
+        <h1 style="color: black">Shon's Academy</h1>
+    </header>
+
+    <div class="content">
+        <div class="info-section">
+            <h1 id="heading">
+                <span class="highlight">INGLIZ TILI</span>ni o'rganmoqchimisiz?
+            </h1>
+            <p id="description">
+                O'zingizning raqamingizni qoldiring, biz sizga qo'ng'iroq qilamiz va barcha savollaringizga javob beramiz!
+            </p>
+            <form class="form">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required pattern="[A-Za-zа-яА-ЯёЁ\s]+" title="Введите только имя" oninput="validateName()">
+                <input type="tel" id="phone" name="phone" placeholder="+998 (__) ___-____" required pattern="[0-9]+" title="Введите только цифры" oninput="validatePhone()">
+                <button type="submit" id="submit-btn">Отправить</button>
+            </form>
+
+            <p class="note" id="note">
+                *Darslar Chirchiq shahrida oflayn olib boriladi.
+            </p>
+            <div class="language-buttons">
+                <button id="uzbek-btn" class="lang-btn active">O'zbekcha</button>
+                <button id="russian-btn" class="lang-btn">Русский</button>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="image/IMG_5696.PNG" alt="Shon's Academy Logo" class="logo-image">
+            <div class="cert-info">
+                <h2>Shon's Academy</h2>
+                <p>Лучшие курсы для вашего будущего успеха!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Shon's Academy. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</div>
+
+<!-- Всплывающее окно -->
+<div id="confirmation-message" class="popup hidden">
+    <div class="popup-content">
+        <p>Ваш запрос был отправлен! Мы свяжемся с вами в течение нескольких минут.</p>
+        <button id="close-popup-btn">Закрыть</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
