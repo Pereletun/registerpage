@@ -12,10 +12,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* Основной контейнер */
 .main-container {
     width: 100%;
     max-width: 1200px;
@@ -25,14 +26,15 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
+    margin: 20px;
 }
 
+/* Заголовок */
 .header {
     background: #009688;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .header h1 {
@@ -41,11 +43,11 @@ body {
     font-weight: bold;
 }
 
+/* Контент */
 .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     padding: 20px;
     gap: 20px;
 }
@@ -57,7 +59,7 @@ body {
 }
 
 .info-section h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
@@ -75,16 +77,16 @@ body {
 .form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .form input {
     width: 100%;
     padding: 12px;
-    margin-bottom: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
 .form input:focus {
@@ -94,7 +96,6 @@ body {
 }
 
 .form button {
-    width: 100%;
     padding: 12px;
     background-color: #009688;
     color: white;
@@ -123,6 +124,7 @@ body {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .lang-btn {
@@ -174,14 +176,16 @@ body {
     color: #666;
 }
 
+/* Футер */
 .footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     font-size: 0.9rem;
 }
 
+/* Попап */
 .popup {
     position: fixed;
     top: 0;
@@ -205,7 +209,7 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -232,44 +236,53 @@ body {
     background-color: #00796b;
 }
 
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
-    .main-container {
-        margin: 10px;
-    }
-
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1024px) {
     .content {
         flex-direction: column;
-        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
     }
 
     .info-section, .image-section {
         max-width: 100%;
-    }
-
-    .form button {
-        font-size: 1rem;
-    }
-
-    .logo-image {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 1.5rem;
+        text-align: center;
     }
 
     .form input, .form button {
         font-size: 1rem;
     }
 
-    .lang-btn {
-        font-size: 14px;
+    .logo-image {
+        width: 90%;
     }
 }
-/* Скрыто по умолчанию */
-.popup.hidden {
-    display: none;
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.4rem;
+    }
+
+    .info-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .form input, .form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .lang-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .popup-content {
+        width: 95%;
+    }
 }
+
