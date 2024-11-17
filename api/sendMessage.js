@@ -2,7 +2,7 @@
 const axios = require("axios");
 
 const TOKEN = "7756662510:AAGVp31vi-GvcvSeTP_O2UsNN6EjRMGdS9w";
-const CHAT_ID = "1648456491";
+const CHAT_ID = "1652055931";
 const TELEGRAM_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 // Функция для получения IP клиента
