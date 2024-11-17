@@ -75,7 +75,7 @@ document.querySelector(".form").addEventListener("submit", function (e) {
         return;
     }
     // Определяем базовый URL для API
-    const apiUrl = "https://your-app-name.herokuapp.com/api"; // твой серверный URL
+    const apiUrl = "https://registerpage-roan.vercel.app/"; // твой серверный URL
 
     // Отправка данных на сервер
     fetch("/send-message", {
